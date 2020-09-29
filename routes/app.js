@@ -6,19 +6,19 @@ const Ventilator = require('../models/Ventilators');
 
 //Reading the  Hospital details
 router.get('/getH',(req,res,next)=>{
-    db.collection("hospitals").find({}).toArray( function(err, output) {
+    db.collection("hospitals").find({}).toArray( function(err, result) {
         if (err) throw err;
-        res.send(output);
-        console.log(output);
+        res.send(result);
+        console.log(result);
     });
 });
 
 //Reading the Ventilators  details 
 router.get('/getV',(req,res,next)=>{
-    db.collection("ventilators").find({}).toArray( function(err, output) {
+    db.collection("ventilators").find({}).toArray( function(err, result) {
         if (err) throw err;
-        res.send(output);
-        console.log(output);
+        res.send(result);
+        console.log(result);
     });
 });
 
